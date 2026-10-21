@@ -26,7 +26,19 @@
 
 </div>
 
+### Test
+
+<div align="center">
+  
+| Test                | Expected Behavior                     | Actual Behavior                          |
+| :------------------ | :------------------------------------ | :--------------------------------------- |
+| UART with jumper    | Serial2 receives the transmitted data | receives and prints the data transmitted |
+| UART without jumper | Serial2 receives nothing              | Can send, but Receiver gets nothing      |
+
+</div>
+
 # Circuit Diagram
+The RX Pin was set to be input_pullup internally to filter noise. The data can be transmitted to another device.
 
 <p align="center">
   <img width="606" height="587" alt="UART" src="https://github.com/user-attachments/assets/78b87b76-d176-4cb3-8134-4aff3f1bcc09">
