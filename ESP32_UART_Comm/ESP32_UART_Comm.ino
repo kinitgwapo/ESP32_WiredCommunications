@@ -6,18 +6,17 @@ void serial_Send();
 void serial_Receive();
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(9600); // Sets PC to ESP32 UART Communication
 
-  Serial2.begin(
+  Serial2.begin( // Sets ESP32 UART's TX Pin to its own RX Pin
     9600,
     SERIAL_8N1,
     RX2_PIN,
     TX2_PIN
   );
 
-  if(Serial && Serial2) {
-    Serial.println("Serial initialization was successfull!");
-  }
+  while(!(Serial && Serial2));
+  Serial.println("Serial initialization was successfull!");
 }
 
 void loop() {
