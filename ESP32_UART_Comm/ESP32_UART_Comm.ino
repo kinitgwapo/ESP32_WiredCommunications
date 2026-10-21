@@ -31,26 +31,26 @@ void loop() {
 }
 
 void serial_Send() {
-  if(Serial.available()) {
-    String text = Serial.readStringUntil('\n');
+  if(Serial.available()) { // Check once if PC Serial Monitor Command is sending data to ESP32
+    String text = Serial.readStringUntil('\n'); // Stores the entire incoming String
     Serial.println("Command sent (Serial Monitor Command): " + text);
-    Serial2.println(text);
+    Serial2.println(text); // Let TX2_PIN send data
   }
 }
 
 void serial_Receive() {
   unsigned long currentTick_Ref = millis();
 
-  if(currentTick_Ref - previousTick_Ref >= INTERVAL) {
+  if(currentTick_Ref - previousTick_Ref >= INTERVAL) { // Executes block of code only if the current time surpasses the interval
     previousTick_Ref = currentTick_Ref;
 
-    if(Serial2.available()) {
+    if(Serial2.available()) { // Check once if there is an incoming data received by RX
       Serial.println("Command received (Serial2): ");
 
-      while(Serial2.available()) {
+      while(Serial2.available()) { // Checks incoming data received by RX again, but now in loop
         char text = Serial2.read();
 
-        if(text != '\r' && text != '\n') {
+        if(text != '\r' && text != '\n') { // Ignore printing unnecessary characters
           Serial.println(text);
         }
       }
