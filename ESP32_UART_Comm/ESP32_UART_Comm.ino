@@ -1,6 +1,9 @@
 #define RX2_PIN 32
 #define TX2_PIN 33
 
+unsigned long previousTick_Ref = 0;
+#define INTERVAL 1000
+
 void serial_Send();
 
 void serial_Receive();
@@ -36,8 +39,21 @@ void serial_Send() {
 }
 
 void serial_Receive() {
-  if(Serial2.available()) {
-    String text = Serial2.readStringUntil('\n');
-    Serial.println("Command received (Serial2): " + text);
+  unsigned long currentTick_Ref = millis();
+
+  if(currentTick_Ref - previousTick_Ref >= INTERVAL) {
+    previousTick_Ref = currentTick_Ref;
+
+    if(Serial2.available()) {
+      Serial.println("Command received (Serial2): ");
+
+      while(Serial2.available()) {
+        char text = Serial2.read();
+
+        if(text != '\r' && text != '\n') {
+          Serial.println(text);
+        }
+      }
+    }
   }
 }
