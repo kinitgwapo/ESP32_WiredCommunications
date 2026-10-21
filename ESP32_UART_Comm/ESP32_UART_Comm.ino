@@ -30,7 +30,7 @@ void loop() {
 void serial_Send() {
   if(Serial.available()) {
     String text = Serial.readStringUntil('\n');
-    Serial.println("Command sent: " + text);
+    Serial.println("Command sent (Serial Monitor Command): " + text);
     Serial2.println(text);
   }
 }
@@ -38,6 +38,6 @@ void serial_Send() {
 void serial_Receive() {
   if(Serial2.available()) {
     String text = Serial2.readStringUntil('\n');
-    Serial2.println("Command Received: " + text);
+    Serial.println("Command received (Serial2): " + text);
   }
 }
