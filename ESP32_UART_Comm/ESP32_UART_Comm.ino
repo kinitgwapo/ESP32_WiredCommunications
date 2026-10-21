@@ -6,8 +6,9 @@ void serial_Send();
 void serial_Receive();
 
 void setup() {
-  Serial.begin(9600); // Sets PC to ESP32 UART Communication
+  Serial.begin(115200); // Sets PC to ESP32 UART Communication
 
+  pinMode(RX2_PIN, INPUT_PULLUP); // Set RX Pin to Pull-Up to filter out noise
   Serial2.begin( // Sets ESP32 UART's TX Pin to its own RX Pin
     9600,
     SERIAL_8N1,
@@ -16,7 +17,7 @@ void setup() {
   );
 
   while(!(Serial && Serial2));
-  Serial.println("Serial initialization was successfull!");
+  Serial.println("Serial initialization was successful!");
 }
 
 void loop() {
