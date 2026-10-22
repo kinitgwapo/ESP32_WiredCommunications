@@ -3,7 +3,9 @@
 SPIClass spi(VSPI);
 
 void spi_Setup() {
-  SPI.begin( // Set ESP32 SPI Pins (SCK, MISO, MOSI, CS)
+  Serial.begin(115200); // Sets PC to ESP32 UART Communication
+
+  spi.begin( // Set ESP32 SPI Pins (SCK, MISO, MOSI, CS)
     SCK_PIN,
     MISO_PIN,
     MOSI_PIN,
