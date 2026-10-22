@@ -1,10 +1,10 @@
 #ifndef SPI_MODULE_H
 #define SPI_MODULE_H
 
-#define SCK 19
-#define MISO 21
-#define MOSI 22
-#define CS 23
+#define SCK_PIN 19
+#define MISO_PIN 21
+#define MOSI_PIN 22
+#define CS_PIN 23
 
 #include <Arduino.h>
 #include <SPI.h>
