@@ -34,7 +34,7 @@ void spi_sendreceive() {
   spi.endTransaction(); // End SPI Transaction
 
   Serial.println(
-    "Sent: " + String(txValue) +
-    "\nReceived: " + String(rxValue)
+    "Sent: " + String(txValue, HEX) +
+    "\nReceived: " + String(rxValue, HEX)
   );
 }
