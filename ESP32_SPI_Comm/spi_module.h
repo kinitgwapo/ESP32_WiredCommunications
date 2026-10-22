@@ -6,9 +6,13 @@
 #define MOSI_PIN 22
 #define CS_PIN 23
 
+#define ONE_MHZ 1000000
+
 #include <Arduino.h>
 #include <SPI.h>
 
 void spi_Setup();
+
+void spi_sendreceive();
 
 #endif
