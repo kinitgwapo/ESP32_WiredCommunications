@@ -37,7 +37,7 @@ void loop() {
 }
 
 void i2c_address_scan() {
-  bool result;
+  uint8_t result;
 
   // Sends 7-bit Addresses except value 0:127 because they are reserved
   for (uint8_t address = 1; address < 127; address++) {
