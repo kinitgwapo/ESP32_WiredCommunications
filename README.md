@@ -9,7 +9,7 @@ This project focuses on the different types of ESP32 Wire Communications, such a
 
 | Signal    | UART TX | UART RX | I2C SDA | I2C SCL | SPI SCK | SPI MOSI | SPI MISO | SPI CS |
 | :-------: | :------ | :------ | :------ | :------ | :------ | :------- | :------- | :----- |
-| GPIO Used | 33      | 32      |         |         | 19      | 22       | 21       | 23     |
+| GPIO Used | 33      | 32      | 18      | 19      | 19      | 22       | 21       | 23     |
 
 </div>
 
