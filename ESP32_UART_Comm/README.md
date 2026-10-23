@@ -32,7 +32,7 @@
 </div>
 
 # Circuit Diagram
-The RX Pin was set to be input_pullup internally to filter noise. The data can be transmitted to another device.
+The RX Pin was set to have an internal pull-up resistor to filter noise. The data could have been transmitted to another device, but as of testing, only 1 ESP32 board was available.
 
 <p align="center">
   <img width="606" height="587" alt="UART" src="https://github.com/user-attachments/assets/78b87b76-d176-4cb3-8134-4aff3f1bcc09">
