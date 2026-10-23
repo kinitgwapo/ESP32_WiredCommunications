@@ -1,5 +1,16 @@
 # Serial Monitor & Observation Table
 
+#### Serial Monitor
+
+<div align="center">
+
+| Output                                                              |
+| :------------------------------------------------------------------ |
+| 14:31:14.908 -> Peripheral device acknowledged on address 3c (0x3C) |
+| 14:31:14.908 -> Scanning Complete.                                  |
+
+</div>
+
 #### Test
 
 <div align="center">
