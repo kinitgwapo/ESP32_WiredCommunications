@@ -1,3 +1,18 @@
+# Serial Monitor & Observation Table
+
+#### Serial Monitor
+
+#### Test
+
+<div align="center">
+
+| Test               | Expected Behavior                                  | Actual Behavior                                                     |
+| :----------------- | :------------------------------------------------- | :------------------------------------------------------------------ |
+| SPI with Jumper    | MISO receives data from MOSI                       | Prints out the data sent in loopback                                |
+| SPI without Jumper | MISO is floating and cannot receive data from MOSI | Does not print out sent data due to no physical loopback connection |
+
+</div>
+
 # Circuit Diagram
 
 <p align="center">
