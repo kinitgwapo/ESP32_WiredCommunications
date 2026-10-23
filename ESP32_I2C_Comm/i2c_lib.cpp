@@ -15,19 +15,20 @@ void i2c_Setup() {
 }
 
 void i2c_address_scan() {
-  uint8_t result;
+  bool acknowledged = false;
 
   // Sends 7-bit Addresses except value 0:127 because they are reserved
   for (uint8_t address = 1; address < 127; address++) {
     Wire.beginTransmission(address); // Queue bytes/addresses
-    result = Wire.endTransmission(); // Sends bytes/addresses and returns a status code (ACK - Acknowledgement from peripheral)
+    uint8_t result = Wire.endTransmission(); // Sends bytes/addresses and returns a status code (ACK - Acknowledgement from peripheral)
 
     if(result == 0) { // Status code (0) indicates as address sent acknowledged by a peripheral device
       Serial.println("Peripheral device acknowledged on address " + String(address, HEX));
+      acknowledged = true;
     }
   }
 
-  if(result == 2) { // Status code (2) indicates as address sent not acknowledged by any peripheral device
+  if(acknowledged == false) { // Status code (2) indicates as address sent not acknowledged by any peripheral device
     Serial.println("No peripheral device(s) address was acknowledged!");
   }
 
