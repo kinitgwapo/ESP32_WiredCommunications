@@ -1,8 +1,10 @@
-# Output (Serial Monitor)
+# Serial Monitor & Observation Table
+
+#### Serial Monitor
 
 <div align="center">
   
-|                                                               |
+| Output                                                        |
 | :------------------------------------------------------------ |
 | 01:08:02.448 -> Command sent (Serial Monitor Command): Hi!    |
 | 01:08:03.068 -> Command received (Serial2):                   |
