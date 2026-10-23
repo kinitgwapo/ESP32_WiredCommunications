@@ -2,6 +2,17 @@
 
 #### Serial Monitor
 
+<div align="center">
+
+| Output                              |
+| :---------------------------------- |
+| 11:58:55.543 -> Current CS State: 0 |
+| 12:00:02.059 -> Current CS State: 1 |
+| 12:00:02.059 -> Sent: a5            |
+| 12:00:02.059 -> Received: a5        |
+
+</div>
+
 #### Test
 
 <div align="center">
