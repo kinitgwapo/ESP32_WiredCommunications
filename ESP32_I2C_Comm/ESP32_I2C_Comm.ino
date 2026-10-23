@@ -26,7 +26,14 @@ void setup() {
   Wire.begin(SDA_PIN, SCL_PIN);
 }
 
+uint8_t value = 0;
+
 void loop() {
+  if(value == 0) {
+    value++;
+
+    i2c_address_scan();
+  }
 }
 
 void i2c_address_scan() {
