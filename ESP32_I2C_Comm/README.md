@@ -1,4 +1,4 @@
-# Output (Serial Monitor)
+# Serial Monitor & Observation Table
 
 #### Test
 
