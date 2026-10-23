@@ -27,7 +27,7 @@ void i2c_address_scan() {
     }
   }
 
-  if(result == 2) {
+  if(result == 2) { // Status code (2) indicates as address sent not acknowledged by any peripheral device
     Serial.println("No peripheral device(s) address was acknowledged!");
   }
 
