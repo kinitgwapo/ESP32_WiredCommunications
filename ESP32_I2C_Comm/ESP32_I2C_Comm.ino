@@ -50,7 +50,7 @@ void i2c_address_scan() {
   }
 
   if(result == 2) {
-    Serial.println("No peripheral device address was acknowledged!");
+    Serial.println("No peripheral device(s) address was acknowledged!");
   }
 
   Serial.println("Scanning Complete.");
