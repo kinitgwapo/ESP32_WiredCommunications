@@ -13,6 +13,8 @@
 </div>
 
 # Circuit Diagram
+Both the SDA & SCL are connected to an external pull-up resistor to avoid using the internal ESP32 pull-up resistor which conflicts with the communication due to more ampere reduction from high-resistance, forcing the decision to use an external pull-up resistor with a much controlled resistance level to gain above 500uA+ during logic switching.
+
 
 <p align="center">
 <img width="934" height="424" alt="I2C" src="https://github.com/user-attachments/assets/dd81214d-17b8-49e0-a116-76546d614c96" />
