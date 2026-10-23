@@ -11,14 +11,6 @@
 | 01:08:03.068 -> H                                             |
 | 01:08:03.068 -> i                                             |
 | 01:08:03.068 -> !                                             |
-| 01:08:04.977 -> Command sent (Serial Monitor Command): Hello! |
-| 01:08:05.097 -> Command received (Serial2):                   |
-| 01:08:05.097 -> H                                             |
-| 01:08:05.097 -> e                                             |
-| 01:08:05.097 -> l                                             |
-| 01:08:05.097 -> l                                             |
-| 01:08:05.097 -> o                                             |
-| 01:08:05.097 -> !                                             |
 | 01:08:08.536 -> Command sent (Serial Monitor Command): PING   |
 | 01:08:09.052 -> Command received (Serial2):                   |
 | 01:08:09.052 -> P                                             |
