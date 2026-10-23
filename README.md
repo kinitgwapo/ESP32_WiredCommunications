@@ -1,5 +1,5 @@
 # Description
-This project focuses on the different types of ESP32 Wire Communications, such as, UART, I2C, and SPI.
+This project focuses on the different types of ESP32 Wire Communications, such as, UART, I2C, and SPI. More details are written in each sketch folder.
 
 # Pin/s Configuration & Observation Table
 
